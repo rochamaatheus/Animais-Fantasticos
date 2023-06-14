@@ -2,8 +2,8 @@
 import ScrollSuave from './modules/ScrollSuave.js';
 import Accordion from './modules/Accordion.js';
 import TabNav from './modules/TabNav.js';
+import Modal from './modules/Modal.js';
 
-import initModal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
@@ -20,12 +20,17 @@ accordion.init();
 
 const tabNav = new TabNav(
   '[data-tab="menu"] li',
-  // eslint-disable-next-line comma-dangle
   '[data-tab="content"] section'
 );
 tabNav.init();
 
-initModal();
+const modal = new Modal(
+  '[data-modal="abrir"]',
+  '[data-modal="fechar"]',
+  '[data-modal="container"]'
+);
+modal.init();
+
 initTooltip();
 initDropdownMenu();
 initMenuMobile();

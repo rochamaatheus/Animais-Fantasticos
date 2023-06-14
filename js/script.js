@@ -1,5 +1,5 @@
+/* eslint-disable import/no-unresolved */
 import ScrollSuave from './modules/ScrollSuave.js';
-// eslint-disable-next-line import/no-unresolved
 import Accordion from './modules/Accordion.js';
 import TabNav from './modules/TabNav.js';
 

@@ -18,10 +18,11 @@ scrollSuave.init();
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
 
-// '[data-tab="menu"] li'
-// '[data-tab="content"] section'
-
-const tabNav = new TabNav();
+const tabNav = new TabNav(
+  '[data-tab="menu"] li',
+  // eslint-disable-next-line comma-dangle
+  '[data-tab="content"] section'
+);
 tabNav.init();
 
 initModal();

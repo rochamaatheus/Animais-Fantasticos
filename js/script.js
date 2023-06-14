@@ -2,8 +2,8 @@
 /* eslint-disable import/no-unresolved */
 import ScrollSuave from './modules/ScrollSuave.js';
 import Accordion from './modules/Accordion.js';
-import TabNav from './modules/TabNav.js';
-import Modal from './modules/Modal.js';
+import TabNav from './modules/tabnav.js';
+import Modal from './modules/modal.js';
 
 import initTooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';

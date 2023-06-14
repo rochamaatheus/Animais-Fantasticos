@@ -1,4 +1,5 @@
 import ScrollSuave from './modules/ScrollSuave.js';
+// eslint-disable-next-line import/no-unresolved
 import Accordion from './modules/Accordion.js';
 
 import initTabNav from './modules/tabnav.js';

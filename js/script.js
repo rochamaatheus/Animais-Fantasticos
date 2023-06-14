@@ -1,7 +1,7 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable import/no-unresolved */
-import ScrollSuave from './modules/ScrollSuave.js';
-import Accordion from './modules/Accordion.js';
+import ScrollSuave from './modules/scroll-suave.js';
+import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 

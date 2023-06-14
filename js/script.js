@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable import/no-unresolved */
 import ScrollSuave from './modules/ScrollSuave.js';
 import Accordion from './modules/Accordion.js';

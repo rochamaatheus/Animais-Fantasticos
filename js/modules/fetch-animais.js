@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-named-as-default
 import AnimaNumeros from './anima-numeros.js';
 
-export default function initFetchAnimais() {
+export default function fetchAnimais(url, target) {
   function createAnimal(animal) {
     const div = document.createElement('div');
     div.classList.add('numero-animal');
@@ -9,7 +9,7 @@ export default function initFetchAnimais() {
     return div;
   }
 
-  async function fetchAnimais(url) {
+  async function criarAnimais(url) {
     try {
       const animaisResponse = await fetch(url);
       const animaisJSON = await animaisResponse.json();
@@ -30,5 +30,5 @@ export default function initFetchAnimais() {
     }
   }
 
-  fetchAnimais('./animaisapi.json');
+  criarAnimais('./animaisapi.json');
 }

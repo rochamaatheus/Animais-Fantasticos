@@ -35,7 +35,7 @@ modal.init();
 const toolTip = new Tooltip('[data-tooltip]');
 toolTip.init();
 
-const animaScroll = new AnimaScroll();
+const animaScroll = new AnimaScroll('[data-anime="scroll"]');
 animaScroll.init();
 
 initDropdownMenu();

@@ -9,26 +9,33 @@ export default function fetchAnimais(url, target) {
     return div;
   }
 
-  async function criarAnimais(url) {
+  const numerosGrid = document.querySelector(target);
+  function preencherAnimais(animal) {
+    const divAnimal = createAnimal(animal);
+    numerosGrid.appendChild(divAnimal);
+  }
+
+  function animaAnimaisNumeros() {
+    const animaNumeros = new AnimaNumeros(
+      '[data-numero]',
+      '.numeros',
+      // eslint-disable-next-line comma-dangle
+      'ativo'
+    );
+    animaNumeros.init();
+  }
+
+  async function criarAnimais() {
     try {
       const animaisResponse = await fetch(url);
       const animaisJSON = await animaisResponse.json();
-      const numerosGrid = document.querySelector('.numeros-grid');
-      animaisJSON.forEach((animal) => {
-        const divAnimal = createAnimal(animal);
-        numerosGrid.appendChild(divAnimal);
-      });
-      const animaNumeros = new AnimaNumeros(
-        '[data-numero]',
-        '.numeros',
-        // eslint-disable-next-line comma-dangle
-        'ativo'
-      );
-      animaNumeros.init();
+      // eslint-disable-next-line arrow-parens, no-unused-vars
+      animaisJSON.forEach((animal) => preencherAnimais(animal));
+      animaAnimaisNumeros();
     } catch (erro) {
       console.log(erro);
     }
   }
 
-  criarAnimais('./animaisapi.json');
+  criarAnimais();
 }

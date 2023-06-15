@@ -41,4 +41,4 @@ initFuncionamento();
 initFetchBitcoin();
 initAnimacaoScroll();
 
-fetchAnimais('../animaisapi.json');
+fetchAnimais('../../animaisapi.json', '.numeros-grid');

@@ -1,4 +1,7 @@
-export default function initAnimaNumeros() {
+export default class AnimaNumeros {
+
+  constructor() {}
+
   function animaNumeros() {
     const numeros = document.querySelectorAll('[data-numero]');
 
@@ -25,6 +28,10 @@ export default function initAnimaNumeros() {
     }
   }
   observer = new MutationObserver(handleMutation);
+
+  init() {
+    
+  }
 
   const observerTarget = document.querySelector('.numeros');
   observer.observe(observerTarget, { attributes: true });

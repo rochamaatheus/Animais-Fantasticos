@@ -9,13 +9,17 @@ export default class Tooltip {
 
   onMouseMove(event) {
     this.tooltipBox.style.top = `${event.pageY + 20}px`;
-    this.tooltipBox.style.left = `${event.pageX + 20}px`;
+    if (event.pageX + 240 > window.innerWidth) {
+      this.tooltipBox.style.left = `${event.pageX - 190}px`;
+    } else {
+      this.tooltipBox.style.left = `${event.pageX + 20}px`;
+    }
   }
 
-  onMouseLeave(event) {
+  onMouseLeave({ currentTarget }) {
     this.tooltipBox.remove();
-    event.currentTarget.removeEventListener('mouseleave', this.onMouseLeave);
-    event.currentTarget.removeEventListener('mousemove', this.onMouseMove);
+    currentTarget.removeEventListener('mouseleave', this.onMouseLeave);
+    currentTarget.removeEventListener('mousemove', this.onMouseMove);
   }
 
   criarTooltipBox(element) {
@@ -27,11 +31,11 @@ export default class Tooltip {
     this.tooltipBox = tooltipBox;
   }
 
-  onMouseOver(event) {
-    this.criarTooltipBox(event.currentTarget);
+  onMouseOver({ currentTarget }) {
+    this.criarTooltipBox(currentTarget);
 
-    event.currentTarget.addEventListener('mousemove', this.onMouseMove);
-    event.currentTarget.addEventListener('mouseleave', this.onMouseLeave);
+    currentTarget.addEventListener('mousemove', this.onMouseMove);
+    currentTarget.addEventListener('mouseleave', this.onMouseLeave);
   }
 
   addTooltipsEvent() {

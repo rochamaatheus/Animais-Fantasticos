@@ -1,20 +1,50 @@
+/* eslint-disable function-paren-newline */
+/* eslint-disable arrow-parens */
+/* eslint-disable comma-dangle */
+/* eslint-disable implicit-arrow-linebreak */
 import outsideClick from './outsideclick.js';
 
-export default function initMenuMobile() {
-  const menuButton = document.querySelector('[data-menu="button"]');
-  const menuList = document.querySelector('[data-menu="list"]');
-  const eventos = ['click', 'touchstart'];
+export default class MenuMobile {
+  constructor(menuButton, menuList, eventos) {
+    this.menuButton = document.querySelector(menuButton);
+    this.menuList = document.querySelector(menuList);
+    this.eventos = eventos || ['click', 'touchstart'];
 
-  function openMenu() {
-    menuList.classList.add('active');
-    menuButton.classList.add('active');
-    outsideClick(menuList, eventos, () => {
-      menuList.classList.remove('active');
-      menuButton.classList.remove('active');
+    this.openMenu = this.openMenu.bind(this);
+  }
+
+  openMenu() {
+    this.menuList.classList.add('active');
+    this.menuButton.classList.add('active');
+    this.addAccessibility();
+    outsideClick(this.menuList, this.eventos, () => {
+      this.menuList.classList.remove('active');
+      this.menuButton.classList.remove('active');
+      this.addAccessibility();
     });
   }
 
-  if (menuButton) {
-    eventos.forEach(evento => menuButton.addEventListener(evento, openMenu));
+  addAccessibility() {
+    const btn = this.menuButton;
+    const active = btn.classList.contains('active');
+    btn.setAttribute('aria-expanded', active);
+    if (active) {
+      btn.setAttribute('aria-label', 'Fechar menu');
+    } else {
+      btn.setAttribute('aria-label', 'Abrir menu');
+    }
+  }
+
+  addMobileEvents() {
+    this.eventos.forEach((evento) =>
+      this.menuButton.addEventListener(evento, this.openMenu)
+    );
+  }
+
+  init() {
+    if (this.menuButton && this.menuList) {
+      this.addMobileEvents();
+      this.addAccessibility();
+    }
   }
 }

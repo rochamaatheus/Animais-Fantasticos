@@ -1,7 +1,8 @@
 /* eslint-disable operator-linebreak */
 export default class Funcionamento {
-  constructor(funcionamento) {
+  constructor(funcionamento, aberto) {
     this.funcionamento = document.querySelector(funcionamento);
+    this.aberto = aberto;
   }
 
   dadosFuncionamento() {
@@ -18,15 +19,26 @@ export default class Funcionamento {
   }
 
   estaAberto() {
-    this.semanaAberto = this.diasSemana.indexOf(this.diaAgora) !== -1;
-    this.horarioAberto =
+    const semanaAberto = this.diasSemana.indexOf(this.diaAgora) !== -1;
+    const horarioAberto =
       this.horarioAgora >= this.horarioSemana[0] &&
       this.horarioAgora < this.horarioSemana[1];
+
+    return semanaAberto && horarioAberto;
+  }
+
+  ativaAberto() {
+    if (this.estaAberto()) {
+      this.funcionamento.classList.add(this.aberto);
+    }
   }
 
   init() {
-    if (this.semanaAberto && this.horarioAberto) {
-      this.funcionamento.classList.add('aberto');
+    if (this.funcionamento) {
+      this.dadosFuncionamento();
+      this.dadosAgora();
+      this.ativaAberto();
     }
+    return this;
   }
 }

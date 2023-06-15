@@ -46,5 +46,6 @@ export default class MenuMobile {
       this.addMobileEvents();
       this.addAccessibility();
     }
+    return this;
   }
 }

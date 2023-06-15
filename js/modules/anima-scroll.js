@@ -18,10 +18,15 @@ export default class AnimaScroll {
     });
   }
 
+  stop() {
+    window.removeEventListener('scroll', this.animaScroll);
+  }
+
   init() {
     if (this.sections.length) {
       this.animaScroll();
       window.addEventListener('scroll', this.animaScroll);
     }
+    return this;
   }
 }

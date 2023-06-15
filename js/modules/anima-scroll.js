@@ -5,7 +5,7 @@ export default class AnimaScroll {
     this.sections = document.querySelectorAll(sections);
     this.windowMetade = window.innerHeight * 0.6;
 
-    this.animaScroll = debounce(this.animaScroll.bind(this), 200);
+    this.animaScroll = debounce(this.animaScroll.bind(this), 50);
   }
 
   animaScroll() {

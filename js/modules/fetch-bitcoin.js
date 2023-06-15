@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 export default function fetchBitcoin(url, target) {
   fetch(url)
     .then((response) => response.json())

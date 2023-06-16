@@ -33,6 +33,7 @@ export default class DropdownMenu {
     /**
      * Função de clique para lidar com a abertura e fechamento do menu suspenso.
      * É necessário fazer o bind para manter o contexto da classe.
+     * @type {Function}
      */
     this.handleClick = this.handleClick.bind(this);
   }

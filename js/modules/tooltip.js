@@ -54,6 +54,12 @@ export default class Tooltip {
     this.tooltipBox.remove();
     currentTarget.removeEventListener('mouseleave', this.onMouseLeave);
     currentTarget.removeEventListener('mousemove', this.onMouseMove);
+    // Lógica para evitar a criação de outra tooltip no mobile
+    const hasTooltip = setTimeout(() => {
+      if (this.tooltipBox) this.tooltipBox.style.top = '-100px';
+      console.log('Outra Tooltip');
+      clearTimeout(hasTooltip);
+    }, 10);
   }
 
   /**

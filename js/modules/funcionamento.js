@@ -13,7 +13,15 @@ export default class Funcionamento {
    * @param {string} aberto - Classe CSS para indicar que está aberto.
    */
   constructor(funcionamento, aberto) {
+    /**
+     * Elemento de funcionamento.
+     * @type {HTMLElement}
+     */
     this.funcionamento = document.querySelector(funcionamento);
+    /**
+     * Classe CSS para indicar que está aberto.
+     * @type {string}
+     */
     this.aberto = aberto;
   }
 

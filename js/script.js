@@ -38,10 +38,11 @@ toolTip.init();
 const animaScroll = new AnimaScroll('[data-anime="scroll"]');
 animaScroll.init();
 
-const dropdownMenu = new DropdownMenu('[data-dropdown]', [
-  'touchstart',
-  'click',
-]);
+const dropdownMenu = new DropdownMenu(
+  '[data-dropdown]',
+  ['touchstart', 'click'],
+  'active'
+);
 dropdownMenu.init();
 
 const menuMobile = new MenuMobile(

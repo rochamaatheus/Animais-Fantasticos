@@ -14,7 +14,7 @@ export default class DropdownMenu {
     const el = event.currentTarget;
     el.classList.add(this.activeClass);
     outsideClick(el, this.events, () => {
-      el.remove(this.activeClass);
+      el.classList.remove(this.activeClass);
     });
   }
 

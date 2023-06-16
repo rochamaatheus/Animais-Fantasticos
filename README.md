@@ -78,7 +78,7 @@ O projeto "Animais Fantásticos" é um site interativo que engloba uma série de
       </div>
     </section>
  ```
- JAVASCRIPT:
+ JavaScript:
  ```javascript
    import Modal from './modules/modal.js';
  

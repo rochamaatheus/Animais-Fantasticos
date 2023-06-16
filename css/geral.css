@@ -273,12 +273,20 @@ body {
 }
 
 [data-anime='accordion'] dt::after {
-  content: '⬎';
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url('../img/arrow-red.svg') no-repeat center center;
+  transform: rotate(90deg);
+  transition: 0.3s;
   margin-left: 10px;
 }
 
 [data-anime='accordion'] dt.ativo::after {
-  content: '⬏';
+  content: '';
+  background: url('../img/arrow-red.svg') no-repeat center center;
+  transform: rotate(-90deg);
 }
 
 [data-anime='accordion'] dd.ativo {
@@ -328,4 +336,11 @@ body {
   padding: 0.2rem 0.5rem;
   font-weight: bold;
   border-radius: 2px;
+}
+
+.arrow-black {
+  background: url('../img/arrow-black.svg') no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
 }

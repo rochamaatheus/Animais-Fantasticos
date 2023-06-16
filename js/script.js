@@ -15,19 +15,21 @@ import Funcionamento from './modules/funcionamento.js';
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
 
-const accordion = new Accordion('[data-anime="accordion"] dt');
+const accordion = new Accordion('[data-anime="accordion"] dt', 'ativo');
 accordion.init();
 
 const tabNav = new TabNav(
   '[data-tab="menu"] li',
-  '[data-tab="content"] section'
+  '[data-tab="content"] section',
+  'ativo'
 );
 tabNav.init();
 
 const modal = new Modal(
   '[data-modal="abrir"]',
   '[data-modal="fechar"]',
-  '[data-modal="container"]'
+  '[data-modal="container"]',
+  'ativo'
 );
 modal.init();
 
@@ -37,10 +39,11 @@ toolTip.init();
 const animaScroll = new AnimaScroll('[data-anime="scroll"]');
 animaScroll.init();
 
-const dropdownMenu = new DropdownMenu('[data-dropdown]', [
-  'touchstart',
-  'click',
-]);
+const dropdownMenu = new DropdownMenu(
+  '[data-dropdown]',
+  ['touchstart', 'click'],
+  'active'
+);
 dropdownMenu.init();
 
 const menuMobile = new MenuMobile(

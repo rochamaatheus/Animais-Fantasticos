@@ -28,7 +28,8 @@ tabNav.init();
 const modal = new Modal(
   '[data-modal="abrir"]',
   '[data-modal="fechar"]',
-  '[data-modal="container"]'
+  '[data-modal="container"]',
+  'ativo'
 );
 modal.init();
 

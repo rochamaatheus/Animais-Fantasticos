@@ -1,3 +1,8 @@
+/* eslint-disable function-paren-newline */
+/* eslint-disable comma-dangle */
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable arrow-parens */
+/* eslint-disable operator-linebreak */
 import debounce from './debounce.js';
 
 /**
@@ -19,6 +24,7 @@ export class Slide {
     this.slide = document.querySelector(slide);
     /** @type {string} */
     this.activeClass = activeClass;
+    // eslint-disable-next-line max-len
     /** @type {{ finalPosition: number, startX: number, movement: number, movePosition?: number }} */
     this.dist = { finalPosition: 0, startX: 0, movement: 0 };
     /** @type {Event} */

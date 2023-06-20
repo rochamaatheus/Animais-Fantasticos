@@ -16,6 +16,8 @@ Um site JavaScript interativo com diversas funcionalidades e lógicas diferentes
 
 O projeto "Animais Fantásticos" é um site interativo que engloba uma série de funcionalidades, como menus de dropdown, modal, tabNav, horário de funcionamento, fetch com bitcoin, entre outras. Cada funcionalidade foi implementada utilizando JavaScript de forma eficiente e organizada, garantindo um alto nível de interatividade e uma experiência agradável para os usuários.
 
+A parte de slides foi separada em outro projeto, pois é algo que precisou de muita lógica para ser concluída, e documentada para ser utilizada em outros projetos, fazendo apenas alterações mínimas. Acesse o Slide [aqui](https://github.com/rochamaatheus/Animais-Slide).
+
 ## Funcionalidades
 
 - Menus de dropdown interativos

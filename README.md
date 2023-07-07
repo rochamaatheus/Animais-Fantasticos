@@ -1,12 +1,12 @@
 # Animais Fantásticos
 
-![Site Demo](site_demo.png)
+![Capa_Site](https://i.imgur.com/n8w5vPp.png)
 
 Um site JavaScript interativo com diversas funcionalidades e lógicas diferentes. Este projeto foi desenvolvido com o objetivo de criar um site rápido e funcional, utilizando várias técnicas e recursos avançados de JavaScript. Além disso, todas as classes e funções foram devidamente documentadas e podem ser utilizadas em projetos de outros desenvolvedores.
 
 [Acesse o site](https://rochamaatheus.github.io/Animais-Fantasticos/index.html)
 
-![Logo](logo.png)
+ <img align="center" alt="Rocha-JavaScript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
 
 🚀 Linguagem utilizada: JavaScript
 
